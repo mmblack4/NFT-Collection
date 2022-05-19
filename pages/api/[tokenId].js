@@ -5,6 +5,9 @@ export default function handler(req, res) {
 
   const name = `Crypto Dev #${tokenId}`;
   const description = "CryptoDevs is an NFT Collection for Web3 Developers";
-  
-  res.status(200).json({ tokenId: tokenId });
+  const image = `https://raw.githubusercontent.com/mmblack4/NFT-Collection/main/public/cryptodevs/${
+    Number(tokenId) - 1
+  }.svg`;
+
+  res.status(200).json({ name, description, image });
 }

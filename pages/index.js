@@ -11,7 +11,7 @@ export default function Home() {
   const [presaleStarted, setPresaleStarted] = useState(false);
   const [presaleEnded, setPresaleEnded] = useState(false);
   const [isOwner, setIsOwner] = useState(false);
-  const [numTokensMinted, setNumTokensMinted] = useState();
+  const [numTokensMinted, setNumTokensMinted] = useState(0);
 
   const getNumbeMintedTokens = async () => {
     try {
@@ -274,7 +274,7 @@ export default function Home() {
       </Head>
       <div className={styles.main}>
         <span className={styles.description}>
-          {numTokensMinted}/20 NTF as Mint 
+          {numTokensMinted}/20 NTF as Mint
         </span>
         {renderBody()}
       </div>
